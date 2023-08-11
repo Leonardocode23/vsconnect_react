@@ -43,7 +43,7 @@
 
 
 /* MAIN */
-#lista-devs .main_cadastro {
+main#lista-devs{
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/img/background_login.png");
@@ -53,13 +53,13 @@
     background-position: bottom;
 }
 
-#lista-devs .main_cadastro #lista-devs .container_cad {
+main#lista-devs .container_cad {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#lista-devs .main_cadastro  .cad_conteudo {
+main#lista-devs   .cad_conteudo {
     background: linear-gradient(114.61deg, #ffffff0d 1.08%, #ffffff1e 99.26%);
     box-shadow: 30px 30px 60px #00000080;
     border: 1px solid #ffffffcc;
@@ -75,13 +75,13 @@
     margin: 100px 0;
 }
 
-#lista-devs .main_cadastro h1 {
+main#lista-devs  h1 {
     font-family: var(--font1);
     font-size: 50px;
     text-align: center;
 }
 
-#lista-devs .main_cadastro hr {
+main#lista-devs  hr {
     margin: 20px auto;
     width: 80%;
     height: 4px;
@@ -90,19 +90,19 @@
     border-radius: 50%;
 }
 
-#lista-devs .main_cadastro  .cad_linha_checkbox {
+main#lista-devs .cad_linha_checkbox {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin: 20px 0;
 }
 
-#lista-devs .main_cadastro  .cad_container_checkbox{
+main#lista-devs  .cad_container_checkbox{
     width: 43px;
     position: relative;
 }
 
-#lista-devs .main_cadastro  .cad_box_checkbox {
+main#lista-devs .cad_box_checkbox {
     width: 100%;
     height: 24px;
     background-color: #ffffff20;
@@ -111,17 +111,17 @@
     margin-bottom: 20px;
 }
 
-#lista-devs .cad_checkbox:checked ~ .cad_box_checkbox{
+#lista-devs .cad_checkbox:checked  .cad_box_checkbox{
 
 }
 
-#lista-devs .main_cadastro  .cad_checkbox {
+main#lista-devs .cad_checkbox {
     display: none;
     /* position: absolute;
     left: -100vw; */
 }
 
-#lista-devs .main_cadastro  .cad_label {
+main#lista-devs .cad_label {
     width: 20px;
     height: 20px;
     display: block;
@@ -136,17 +136,17 @@
     transition: cubic-bezier(0.895, 0.07, 0.685, 0.68);
 }
 
-#lista-devs .main_cadastro  .cad_checkbox:checked{
+main#lista-devs  .cad_checkbox:checked{
     /* margin-bottom: 100px; */
 
 }
 
-#lista-devs .main_cadastro  .cad_checkbox:checked + .cad_label {
+main#lista-devs .cad_checkbox:checked + .cad_label {
     left: 21px;
     background-color: var(--rosa);
 }
 
-#lista-devs .main_cadastro #lista-devs .cad_formulario {
+main#lista-devs .cad_formulario {
     width: 95%;
     max-width: 460px;
     display: flex;
@@ -154,37 +154,37 @@
     font-family: var(--font2);
 }
 
-#lista-devs .main_cadastro #lista-devs .cad_linha1_input,
-#lista-devs .main_cadastro #lista-devs .cad_linha2_input {
+main#lista-devs .cad_linha1_input,
+main#lista-devs   .cad_linha2_input {
     display: flex;
     margin: 15px 0;
     justify-content: space-between;
     gap: 10%
 }
 
-#lista-devs .main_cadastro  .cad_linha1_input>div:nth-child(1),
-#lista-devs .main_cadastro .cad_linha2_input>div:nth-child(2) {
+main#lista-devs .cad_linha1_input>div:nth-child(1),
+main#lista-devs .cad_linha2_input>div:nth-child(2) {
     flex: 1;
 }
 
-#lista-devs .main_cadastro  .cad_linha1_input>div:nth-child(2),
-#lista-devs .main_cadastro .cad_linha2_input>div:nth-child(1) {
+main#lista-devs .cad_linha1_input>div:nth-child(2),
+main#lista-devs  .cad_linha2_input>div:nth-child(1) {
     flex: 2;
 }
 
-#lista-devs .main_cadastro  .cad_box_input {
+main#lista-devs .cad_box_input {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 15px 0;
 }
 
-#lista-devs .main_cadastro label {
+main#lista-devs label {
     font-size: 20px;
 }
 
-#lista-devs .main_cadastro  .cad_box_input2 > input,
-#lista-devs .main_cadastro  .cad_box_input > input {
+main#lista-devs .cad_box_input2 > input,
+main#lista-devs .cad_box_input > input {
     width: 100%;
     padding: 8px;
     border-radius: 20px;
@@ -196,36 +196,36 @@
     font-size: 16px;
 }
 
-#lista-devs .main_cadastro #cad_select_skill:focus-visible,
-#lista-devs .main_cadastro  .cad_box_input2 > input:focus-visible,
-#lista-devs .main_cadastro  .cad_box_input > input:focus-visible {
+main#lista-devs  #cad_select_skill:focus-visible,
+main#lista-devs  .cad_box_input2 > input:focus-visible,
+main#lista-devs .cad_box_input > input:focus-visible {
     outline: 2px solid var(--rosa);
 }
 
 /* Cor de fundo do autocomplete */
-#lista-devs .main_cadastro input:-webkit-autofill {
+main#lista-devs input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #524569 inset;
 }
 
 /* Cor do texto do autocomplete */
-#lista-devs .main_cadastro input:-webkit-autofill {
+main#lista-devs input:-webkit-autofill {
     -webkit-text-fill-color: var(--branco);
 }
 
-#lista-devs .main_cadastro  .cad_box_input2 > input::placeholder,
-#lista-devs .main_cadastro  .cad_box_input > input::placeholder {
+main#lista-devs   .cad_box_input2 > input::placeholder,
+main#lista-devs  .cad_box_input > input::placeholder {
     color: #ffffff80;
     font-size: 15px;
 }
 
-#lista-devs .main_cadastro .cad_formulario > span{
+main#lista-devs  .cad_formulario > span{
     font-family: var(--font1);
     font-size: 30px;
     text-align: center;
     margin-top: 30px;
 }
 
-#lista-devs .main_cadastro .cad_hard_skill > span {
+main#lista-devs .cad_hard_skill > span {
     font-family: var(--font1);
     font-size: 1.875em;
     text-align: center;
@@ -233,11 +233,11 @@
 
 }
 
-#lista-devs .main_cadastro  .cad_uf {
+main#lista-devs .cad_uf {
     text-transform: uppercase;
 }
 
-#lista-devs .main_cadastro .cad_hard_skill {
+main#lista-devs .cad_hard_skill {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -253,19 +253,19 @@
     /* transition: #lista-devs .3s height cubic-bezier(0#lista-devs .895, 0#lista-devs .07, 0#lista-devs .685, 0#lista-devs .68); */
 }
 
-#lista-devs .main_cadastro  .cad_checkbox:checked ~  .cad_hard_skill {
+main#lista-devs  .cad_checkbox:checked ~  .cad_hard_skill {
     /* transition-delay: 1S; */
     /* height: 300px; */
     /* font-size: 16px; */
     display: flex;
 }
 
-#lista-devs .main_cadastro  .cad_linha_select{
+main#lista-devs .cad_linha_select{
     display: flex;
     gap: 10%;
 }
 
-#lista-devs .main_cadastro #cad_select_skill{
+main#lista-devs #cad_select_skill{
     flex: 2;
     padding: 8px;
     border-radius: 20px;
@@ -277,13 +277,13 @@
     font-size:  16px;
 }
 
-#lista-devs .main_cadastro #cad_select_skill option{
+main#lista-devs #cad_select_skill option{
     /* appearance: none; */
     background-color: #454158;
     /* background: linear-gradient(136deg, #ffffff1a 0%, #ffffff0b 100%); */
 }
 
-#lista-devs .main_cadastro #cad_btn_inserir{
+main#lista-devs #cad_btn_inserir{
     flex: .8;
     font-size:  18px;
     color: var(--branco);
@@ -296,14 +296,14 @@
     cursor: pointer;
 }
 
-#lista-devs .main_cadastro #cad_lista_skills{
+main#lista-devs #cad_lista_skills{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     padding: 50px 0;
 }
 
-#lista-devs .main_cadastro  .cad_item_skill{
+main#lista-devs .cad_item_skill{
     border: 1px solid #b5b5b5;
     background: var(--branco);
     color: var(--azulP);
@@ -315,7 +315,7 @@
     gap: 10px;
 }
 
-#lista-devs .main_cadastro .cad_item_excluir{
+main#lista-devs .cad_item_excluir{
     background: none;
     border: none;
     display: flex;
@@ -323,17 +323,17 @@
     cursor: pointer;
 }
 
-#lista-devs .main_cadastro  .cad_item_excluir:hover{
+main#lista-devs  .cad_item_excluir:hover{
     scale: 1.1;
     filter:drop-shadow(0 0 2px var(--azul));
 }
 
-#lista-devs .main_cadastro  .cad_item_excluir svg{
+main#lista-devs .cad_item_excluir svg{
     fill: var(--rosa);
     height: 16px;
 }
 
-#lista-devs .main_cadastro  .cad_botao {
+main#lista-devs  .cad_botao {
     align-self: center;
     font-family: var(--font1);
     color: var(--branco);
@@ -497,14 +497,14 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    #lista-devs .main_cadastro #lista-devs .cad_hard_skill {
+    main#lista-devs  #lista-devs .cad_hard_skill {
         width: 345px;
         right: 125px;
     }
 }
 
 @media screen and (max-width: 420px) {
-    #lista-devs .main_cadastro #lista-devs .cad_hard_skill {
+    main#lista-devs #lista-devs .cad_hard_skill {
         width: 260px;
         right: 80px;
     }
