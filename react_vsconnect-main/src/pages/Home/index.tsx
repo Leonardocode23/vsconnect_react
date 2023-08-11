@@ -12,7 +12,7 @@ function Home() {
     return (
         <>
             
-            <main id="main">
+            <main id="Home-main">
                 <h1>página inicial VSconnect</h1>
                 <section className="banner">
                     <div className="banner_conteudo">

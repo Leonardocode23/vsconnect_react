@@ -17,8 +17,7 @@ function CadastroServ(){
     return (
 
         <>
-         <div id="sombra"></div>
-        <main className="main_cad_servico">
+        <main id="cadastro_serv" className="main_cad_servico">
         <div className="container container_cad_serv">
             <div className="cad_serv_conteudo">
                 <h1>Cadastro de Serviço</h1>
