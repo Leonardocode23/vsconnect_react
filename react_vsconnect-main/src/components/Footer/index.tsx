@@ -11,7 +11,7 @@ function Footer() {
         <> 
             <footer>
                 <div className="container rodape">
-                    <div className="span_dicas">
+                    {/* <div className="span_dicas">
                         <img src={ImgDev} alt="" />
                         <div className="span_dicas_texto">
                             <p>
@@ -22,7 +22,7 @@ function Footer() {
                                 mais dicas
                             </a>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="rodape_conteudo">
                         <div className="rodape_conteudo_paginas">
                             <h2>Páginas</h2>

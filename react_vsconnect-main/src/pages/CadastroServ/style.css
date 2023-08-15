@@ -1,7 +1,7 @@
 #cadastro_serv{
     
 }
-#cadastro_serv .main_cad_servico {
+main#cadastro_serv {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/img/background_login.png");
@@ -11,13 +11,13 @@
     background-position: bottom;
 }
 
-#cadastro_serv .main_cad_servico .container_cad_serv {
+#cadastro_serv .container_cad_serv {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_conteudo {
+#cadastro_serv  .cad_serv_conteudo {
     background: linear-gradient(114.61deg, #ffffff0d 1.08%, #ffffff1e 99.26%);
     box-shadow: 30px 30px 60px #00000080;
     border: 1px solid #ffffffcc;
@@ -33,13 +33,13 @@
     margin: 100px 0;
 }
 
-#cadastro_serv .main_cad_servico h1 {
+#cadastro_serv   h1 {
     font-family: var(--font1);
     font-size: 50px;
     text-align: center;
 }
 
-#cadastro_serv .main_cad_servico hr {
+#cadastro_serv   hr {
     margin: 20px auto;
     width: 80%;
     height: 4px;
@@ -48,7 +48,7 @@
     border-radius: 50%;
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_formulario {
+#cadastro_serv   .cad_serv_formulario {
     width: 95%;
     max-width: 460px;
     display: flex;
@@ -56,20 +56,20 @@
     font-family: var(--font2);
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_box_input {
+#cadastro_serv   .cad_serv_box_input {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 15px 0;
 }
 
-#cadastro_serv .main_cad_servico label {
+#cadastro_serv   label {
     font-size: 20px;
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_box_input textarea,
-#cadastro_serv .main_cad_servico .cad_serv_box_input2 > input,
-#cadastro_serv .main_cad_servico .cad_serv_box_input > input {
+#cadastro_serv   .cad_serv_box_input textarea,
+#cadastro_serv   .cad_serv_box_input2 > input,
+#cadastro_serv   .cad_serv_box_input > input {
     width: 100%;
     padding: 8px;
     border-radius: 20px;
@@ -82,43 +82,43 @@
     resize: none;
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_box_input textarea{
+#cadastro_serv   .cad_serv_box_input textarea{
     height: 100px;
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_box_input textarea:focus-visible,
-#cadastro_serv .main_cad_servico #cad_select_skill:focus-visible,
-#cadastro_serv .main_cad_servico .cad_serv_box_input2 > input:focus-visible,
-#cadastro_serv .main_cad_servico .cad_serv_box_input > input:focus-visible {
+#cadastro_serv   .cad_serv_box_input textarea:focus-visible,
+#cadastro_serv   #cad_select_skill:focus-visible,
+#cadastro_serv   .cad_serv_box_input2 > input:focus-visible,
+#cadastro_serv   .cad_serv_box_input > input:focus-visible {
     outline: 2px solid var(--rosa);
 }
 
 /* Cor de fundo do autocomplete */
-#cadastro_serv .main_cad_servico input:-webkit-autofill {
+#cadastro_serv   input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #524569 inset;
 }
 
 /* Cor do texto do autocomplete */
-#cadastro_serv .main_cad_servico input:-webkit-autofill {
+#cadastro_serv   input:-webkit-autofill {
     -webkit-text-fill-color: var(--branco);
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_box_input textarea::placeholder,
-#cadastro_serv .main_cad_servico .cad_serv_box_input2 > input::placeholder,
-#cadastro_serv .main_cad_servico .cad_serv_box_input > input::placeholder {
+#cadastro_serv   .cad_serv_box_input textarea::placeholder,
+#cadastro_serv   .cad_serv_box_input2 > input::placeholder,
+#cadastro_serv   .cad_serv_box_input > input::placeholder {
     color: #ffffff80;
     font-size: 15px;
     font-family: var(--font2);
 }
 
-#cadastro_serv .main_cad_servico .cad_serv_formulario > span{
+#cadastro_serv   .cad_serv_formulario > span{
     font-family: var(--font1);
     font-size: 30px;
     text-align: center;
     margin-top: 30px;
 }
 
-#cadastro_serv .main_cad_servico .cad_hard_skill {
+#cadastro_serv   .cad_hard_skill {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -127,12 +127,12 @@
     display: none;
 }
 
-#cadastro_serv .main_cad_servico .cad_linha_select{
+#cadastro_serv   .cad_linha_select{
     display: flex;
     gap: 10%;
 }
 
-#cadastro_serv .main_cad_servico #cad_select_skill{
+#cadastro_serv   #cad_select_skill{
     flex: 2;
     padding: 8px;
     border-radius: 20px;
@@ -144,13 +144,13 @@
     font-size:  16px;
 }
 
-#cadastro_serv .main_cad_servico #cad_select_skill option{
+#cadastro_serv   #cad_select_skill option{
     /* appearance: none; */
     background-color: #454158;
     /* background: linear-gradient(136deg, #ffffff1a 0%, #ffffff0b 100%); */
 }
 
-#cadastro_serv .main_cad_servico #cad_btn_inserir{
+#cadastro_serv   #cad_btn_inserir{
     flex: .8;
     font-size:  18px;
     color: var(--branco);
@@ -163,14 +163,14 @@
     cursor: pointer;
 }
 
-#cadastro_serv .main_cad_servico #cad_lista_skills{
+#cadastro_serv   #cad_lista_skills{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     padding: 50px 0;
 }
 
-#cadastro_serv .main_cad_servico .cad_item_skill{
+#cadastro_serv   .cad_item_skill{
     border: 1px solid #b5b5b5;
     background: var(--branco);
     color: var(--azulP);
@@ -182,7 +182,7 @@
     gap: 10px;
 }
 
-#cadastro_serv .main_cad_servico .cad_item_excluir{
+#cadastro_serv   .cad_item_excluir{
     background: none;
     border: none;
     display: flex;
@@ -190,17 +190,17 @@
     cursor: pointer;
 }
 
-#cadastro_serv .main_cad_servico .cad_item_excluir:hover{
+#cadastro_serv   .cad_item_excluir:hover{
     scale: 1.1;
     filter:drop-shadow(0 0 2px var(--azul));
 }
 
-#cadastro_serv .main_cad_servico .cad_item_excluir svg{
+#cadastro_serv   .cad_item_excluir svg{
     fill: var(--rosa);
     height: 16px;
 }
 
-#cadastro_serv .main_cad_servico .cad_botao {
+#cadastro_serv   .cad_botao {
     align-self: center;
     font-family: var(--font1);
     color: var(--branco);
@@ -247,14 +247,14 @@
 }
 
 @media screen and (max-width: 600px){
-    #cadastro_serv .main_cad_servico .cad_hard_skill {
+    #cadastro_serv   .cad_hard_skill {
         width: 345px;
         right: 125px;
     }
 }
 
 @media screen and (max-width: 420px) {
-    #cadastro_serv .main_cad_servico .cad_hard_skill {
+    #cadastro_serv   .cad_hard_skill {
         width: 260px;
         right: 80px;
     }
