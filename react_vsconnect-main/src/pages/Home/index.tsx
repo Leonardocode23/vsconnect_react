@@ -1,18 +1,16 @@
 import "./style.css"
+
 import ImgClientes from "../../assets/img/clientes.png"
 import ImgMaosDev from "../../assets/img/maos_dev.png"
 import ImgAlfinete from "../../assets/img/alfinete.png"
 
-
-
 function Home() {
     // Paranaue de typescript
 
-   
+    
     return (
-        <>
-            
-            <main id="Home-main">
+        <>            
+            <main id="home">
                 <h1>página inicial VSconnect</h1>
                 <section className="banner">
                     <div className="banner_conteudo">
