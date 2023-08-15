@@ -2,7 +2,7 @@ import "./style.css"
 function Login() {
     return(
         <>
-         <main>
+         <main id="loginTela">
         <div className="container container_login">
             <div className="login_conteudo">
                 <h1>Login</h1>
