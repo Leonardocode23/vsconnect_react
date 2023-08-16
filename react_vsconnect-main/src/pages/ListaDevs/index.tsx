@@ -13,6 +13,24 @@ export default function ListaDevs() {
             skills: ["HTML", "CSS", "REACT","JAVA",]
         },
         {
+            img_perfil: "https://avatars.githubusercontent.com/u/127408948?v=4",
+            nome: "Thamires Galdino",
+            email: "Thamigld@email.com",
+            skills: ["HTML", "CSS", "REACT","JAVASCRIPT",]
+        },
+        {
+            img_perfil: "https://avatars.githubusercontent.com/u/110692303?v=4",
+            nome: "Janaina Linda",
+            email: "Janna@email.com",
+            skills: ["HTML", "CSS", "REACT","JAVASCRIPT",]
+        },
+        {
+            img_perfil: "https://avatars.githubusercontent.com/u/134456722?v=4",
+            nome: "Ingrid Bruna",
+            email: "Ingrid@email.com",
+            skills: ["HTML", "CSS", "REACT","JAVASCRIPT",]
+        },
+        {
             img_perfil: "https://avatars.githubusercontent.com/u/92703490?v=4",
             nome: "Matheus Amaral",
             email: "Amaral@email.com",
