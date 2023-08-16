@@ -13,6 +13,12 @@ export default function ListaDevs() {
             skills: ["HTML", "CSS", "REACT","JAVA",]
         },
         {
+            img_perfil: "https://avatars.githubusercontent.com/u/92703490?v=4",
+            nome: "Matheus Amaral",
+            email: "Amaral@email.com",
+            skills: [ "JavaScript", "C","JAVA",]
+        },
+        {
             img_perfil: "https://github.com/Thiago-Nascimento.png",
             nome: "Thiago Nascimento",
             email: "thiago@email.com",
