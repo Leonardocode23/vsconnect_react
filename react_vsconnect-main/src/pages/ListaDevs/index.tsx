@@ -1,71 +1,21 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import CardDev from "../../components/CardDev"
 import "./style.css"
+import api from "../../utils/api";
 
 export default function ListaDevs() {
 
-    const [devs, setDevs] = useState<any[]>([
-
-        {
-            img_perfil: "https://avatars.githubusercontent.com/u/134458671?v=4",
-            nome: "Leonardo Santos",
-            email: "Leonardo@email.com",
-            skills: ["HTML", "CSS", "REACT","JAVA",]
-        },
-        {
-            img_perfil: "https://avatars.githubusercontent.com/u/127408948?v=4",
-            nome: "Thamires Galdino",
-            email: "Thamigld@email.com",
-            skills: ["HTML", "CSS", "REACT","JAVASCRIPT",]
-        },
-        {
-            img_perfil: "https://avatars.githubusercontent.com/u/110692303?v=4",
-            nome: "Janaina Linda",
-            email: "Janna@email.com",
-            skills: ["HTML", "CSS", "REACT","JAVASCRIPT",]
-        },
-        {
-            img_perfil: "https://avatars.githubusercontent.com/u/134456722?v=4",
-            nome: "Ingrid Bruna",
-            email: "Ingrid@email.com",
-            skills: ["HTML", "CSS", "REACT","JAVASCRIPT",]
-        },
-        {
-            img_perfil: "https://avatars.githubusercontent.com/u/92703490?v=4",
-            nome: "Matheus Amaral",
-            email: "Amaral@email.com",
-            skills: [ "JavaScript", "C","JAVA",]
-        },
-        {
-            img_perfil: "https://github.com/Thiago-Nascimento.png",
-            nome: "Thiago Nascimento",
-            email: "thiago@email.com",
-            skills: ["HTML", "CSS", "REACT"]
-        },
-        {
-            img_perfil: "https://github.com/JessicaSanto.png",
-            nome: "Jessica Franzon",
-            email: "jessica@email.com",
-            skills: ["HTML", "CSS", "REACT"]
-        },
-        {
-            img_perfil: "https://github.com/odirlei-assis.png",
-            nome: "Odirlei Sabella",
-            email: "odirlei@email.com",
-            skills: ["HTML", "CSS", "ANGULAR"]
-        },
-        {
-            img_perfil: "https://github.com/alexiamelhado18.png",
-            nome: "Aléxia Vitória",
-            email: "alexia@email.com",
-            skills: ["PYTHON", "VUE", "REACT"]
-        }
-
-    ]);
+    const [devs, setDevs] = useState<any[]>([]);
 
     const [skillDigitada, setSkillDigitada] = useState<string>("");
 
     const [listaDevsFiltrados, setListaDevsFiltrados] = useState<any[]>(devs);
+
+    useEffect( () => {
+        document.title = "Lista de Devs - VsConnect"
+
+        listarDesenvolvedores()
+    }, [] )
 
     function buscarPorSkill(event: any){
         event.preventDefault();
@@ -84,6 +34,14 @@ export default function ListaDevs() {
             setListaDevsFiltrados(devs)
         }
         setSkillDigitada(event.target.value)
+    }
+
+    function listarDesenvolvedores() {
+
+        api.get("users").then((response: any)=> {
+            console.log(response.data)
+            setDevs(response.data)
+        })
     }
 
 
@@ -106,13 +64,13 @@ export default function ListaDevs() {
                         </form>
                         <div className="wrapper_lista">
                             <ul>
-                                {listaDevsFiltrados.map((dev: any, index: number) => {
-                                    return <li>
+                                {devs.map((dev: any, index: number) => {
+                                    return <li key={index}>
                                           <CardDev 
-                                          foto={dev.img_perfil}
+                                          foto={dev.user_img}
                                           nome={dev.nome}
                                           email={dev.email}
-                                          techs={dev.skills}
+                                          techs={dev.hardSkills}
                                            />
                                     </li>
                                 }
