@@ -1,5 +1,6 @@
 import "./style.css"
 import { useEffect, useState } from "react"
+import api from "../../utils/api";
 import CardServs from "../../components/CardServs";
 
 export default function ListaServicos() {
@@ -12,21 +13,20 @@ export default function ListaServicos() {
 
     const [listaDevsFiltrados, setListaDevsFiltrados] = useState<any[]>(servs);
 
-    useEffect( () => {
-        document.title = "Lista de Servs - VsConnect"
-
-        ListaServicos()
-    }, [])
+    useEffect(() =>{
+        document.title = "Lista Servicos - VSConnect"
+        listarServicos()
+    }, [] )
 
     function buscarPorSkill(event: any){
         event.preventDefault();
 
-        const devsFiltrados = servs.filter((dev: any) => dev.hardSkills.includes(skillDigitada.toLocaleUpperCase()));
+        const servFiltrados = servs.filter((serv: any) => serv.hardSkills.includes(skillDigitada.toLocaleUpperCase()));
 
-        if(devsFiltrados.length === 0){
+        if(servFiltrados.length === 0){
             alert("Nenhum serviço com essa skill")
         }else{
-            setListaDevsFiltrados(devsFiltrados)
+            setListaDevsFiltrados(servFiltrados)
         }
     }
 
@@ -37,6 +37,13 @@ export default function ListaServicos() {
         setSkillDigitada(event.target.value)
     }
 
+    function listarServicos(){
+        api.get("servicos").then((response: any) =>{
+            console.log(response.data)
+            setServs(response.data)
+
+        })
+    }
 
     return (
         <main id="lista-servicos">
@@ -55,13 +62,13 @@ export default function ListaServicos() {
                         </form>
                         <div className="wrapper_lista">
                             <ul>
-                            {listaDevsFiltrados.map((serv: any, index: number) => {
+                            {servs.map((serv: any, index: number) => {
                                     return <li key={index}>
-                                          <CardServs 
-                                          titulo={serv.titulo}
+                                          <CardServs
+                                          titulo={serv.nome}
                                           valor={serv.valor}
                                           descricao={serv.descricao}
-                                          techs={serv.hardSkills}
+                                          techs={serv.techs}
                                            />
                                     </li>
                                 }
