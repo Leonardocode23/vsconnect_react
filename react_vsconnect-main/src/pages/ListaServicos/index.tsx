@@ -1,83 +1,98 @@
-import "./style.css"
 import { useEffect, useState } from "react"
-import api from "../../utils/api";
-import CardServs from "../../components/CardServs";
-
-export default function ListaServicos() {
-
+import "./style.css"
+import api from "../../utils/api"
+import CardServs from "../../components/CardServs"
 
 
-    const [servs, setServs] = useState<any[]>([]);
+function ListaServ(){
 
-    const [skillDigitada, setSkillDigitada] = useState<string>("");
-
-    const [listaDevsFiltrados, setListaDevsFiltrados] = useState<any[]>(servs);
-
+    const [servicos, setServicos] = useState<any[]>([])
+    //variável para definir a lista de seriços, que está vazia
+    
+    const [techDigitada, setTechDigitada] = useState<string>("");
+    // variável de skill que foi digitada
+    
+    // const [listaServicosFiltrados, setListaServicosFiltrados] = useState<any[]>([]);
+    // variável de lista de serviços que foram filtrados por skill
+    
     useEffect(() =>{
-        document.title = "Lista Servicos - VSConnect"
+        document.title = "VSConnect - Lista de Serviços"
         listarServicos()
-    }, [] )
-
-    function buscarPorSkill(event: any){
-        event.preventDefault();
-
-        const servFiltrados = servs.filter((serv: any) => serv.hardSkills.includes(skillDigitada.toLocaleUpperCase()));
-
-        if(servFiltrados.length === 0){
-            alert("Nenhum serviço com essa skill")
-        }else{
-            setListaDevsFiltrados(servFiltrados)
-        }
-    }
-
-    function retornoDevsGeral(event: any){
-        if(event.target.value === ""){
-            setListaDevsFiltrados(servs)
-        }
-        setSkillDigitada(event.target.value)
-    }
+    }, [])
 
     function listarServicos(){
-        api.get("servicos").then((response: any) =>{
-            console.log(response.data)
-            setServs(response.data)
-
-        })
+        api.get("servicos").then((response:any) => {
+            // console.log(response.data)
+            setServicos(response.data)
+        }).catch(error => console.log("Erro ao obter os dados de serviço.", error));
     }
 
+    function buscarPorSkill(event: any){
+        event.preventDefault()
+
+        const servicosFiltrados = servicos.filter((servico: any) => servico.techs.includes(techDigitada.toLocaleUpperCase()));
+
+        if(servicosFiltrados.length === 0){
+            alert("Nenhum serviço com essa skill.")
+        } else {
+            // console.log(servicosFiltrados)
+            setServicos(servicosFiltrados)
+            // define os serviços com os que foram filtrados
+            // ANTES (NÃO FUNCIONAVA MAIS): setListaServicosFiltrados(servicosFiltrados)
+        }
+    }
+
+    function retornoServicosGeral(event: any){
+        if(event.target.value === ""){
+            listarServicos()
+        }
+        setTechDigitada(event.target.value)
+        // é o alvo da função
+        // se o alvo estiver vazio, a função irá carregar a lista de serviços com a function listarServicos()
+    }
+
+
+
     return (
-        <main id="lista-servicos">
+    <>
+        <div id="sombra"/>
+
+        <main id="lista-servicos" onSubmit={buscarPorSkill}>
             <div className="container container_lista_servicos">
                 <div className="lista_servicos_conteudo">
                     <h1>Lista de Serviços</h1>
                     <hr/>
-                        <form method="post" onSubmit={buscarPorSkill}>
-                            <div className="wrapper_form">
-                                <label htmlFor="busca">Procurar serviços</label>
-                                <div className="campo-label">
-                                    <input type="search" name="campo-busca" id="busca" placeholder="Buscar serviços por tecnologias..." onChange={retornoDevsGeral}/>
-                                        <button type="submit">Buscar</button>
-                                </div>
+                    <form method="post">
+                        <div id="wrapper_form" className="wrapper_form">
+                            <label htmlFor="busca">Procurar serviços</label>
+                            <div className="campo-label">
+                                <input type="search" name="campo-busca" id="busca" placeholder="Buscar serviços por tecnologias..." onChange={retornoServicosGeral}/>
+                                <button type="submit">Buscar</button>
                             </div>
-                        </form>
-                        <div className="wrapper_lista">
-                            <ul>
-                            {servs.map((serv: any, index: number) => {
-                                    return <li key={index}>
-                                          <CardServs
-                                          titulo={serv.nome}
-                                          valor={serv.valor}
-                                          descricao={serv.descricao}
-                                          techs={serv.techs}
-                                           />
-                                    </li>
-                                }
-                                )}
-
-                            </ul>
                         </div>
+                    </form>
+                    <div className="wrapper_lista">
+                    <ul>
+                        {servicos.map((servico:any, index:number) =>{
+                            return <li key={index}>
+                                <CardServs
+                                titulo={servico.nome}
+                                valor={servico.valor}
+                                descricao={servico.descricao}
+                                techs={servico.techs}
+                                />
+                            </li>
+                        }
+                        )}
+                    </ul>
+
+                    </div>
                 </div>
             </div>
         </main>
+    
+    </>
     )
 }
+
+export default ListaServ
