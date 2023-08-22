@@ -3,10 +3,11 @@
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/img/background_login.png");
-    min-height: calc(100vh - 339px);
+    min-height: calc(100vh - 79px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 100px;
 }
 
 #main_visualizarservico .container {
@@ -19,14 +20,14 @@
     text-align: center;
     color: var(--branco);
     font-family: var(--font1);
-    padding: 100px 0;
+    padding: 50px 0;
     font-size: 46px;
 }
 
 #main_visualizarservico .servico {
     width: 85%;
     margin: 0 auto;
-    padding: 15px;
+    padding: 30px;
 
     border: solid 1px #909090;
     border-radius: 16px;
@@ -48,6 +49,10 @@
     font-size: 20px;
 }
 
+#main_visualizarservico h2{
+    width: 70%;
+}
+
 #main_visualizarservico .topo_servico h3 {
     width: 65%;
 }
@@ -57,10 +62,9 @@
 }
 
 #main_visualizarservico .servico .techs {
-    max-width: 70%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #main_visualizarservico .servico .techs span {
@@ -74,4 +78,36 @@
     background-color: var(--rosa);
     color: white;
     font-weight: 600;
+}
+
+#main_visualizarservico .topo_servico span{
+    font-size: 25px;
+    padding: 3px 13px;
+    height: 100%;
+
+    border-radius: 20px;
+    background-color: var(--rosa);
+    color: var(--branco);
+    font-weight: 600;
+}
+
+#main_visualizarservico footer div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main_visualizarservico footer{
+    background-image: none;
+}
+
+.icon_voltar{
+    transition: ease-in 0.1s;
+    fill: var(--branco);
+    padding: 10px;
+    width: 50px;
+}
+
+.icon_voltar:hover{
+    fill: var(--rosa);
 }

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import "./style.css"
 import api from "../../utils/api"
-import CardServs from "../../components/CardServs"
+import CardServ from "../../components/CardServs"
+import { Link } from "react-router-dom"
 
 
 function ListaServ(){
@@ -75,8 +76,8 @@ function ListaServ(){
                     <ul>
                         {servicos.map((servico:any, index:number) =>{
                             return <li key={index}>
-                                <CardServs
-                                  id={servico.id}
+                                <CardServ
+                                id={servico.id}
                                 titulo={servico.nome}
                                 valor={servico.valor}
                                 descricao={servico.descricao}
