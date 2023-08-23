@@ -59,7 +59,7 @@ function Header() {
                         <div id="menu_links" className="menu_links">
                             <Link to="/" >Home</Link>
                             <Link to="lista/servs" >Serviços</Link>
-                            <Link to="cadastro/dev" >Cadastro</Link>
+                            <Link to="cadastroUsuario" >Cadastro</Link>
                             
                         </div>
                         <a className="header_icone_login" href="../Login/index.html">

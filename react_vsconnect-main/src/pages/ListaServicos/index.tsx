@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import "./style.css"
 import api from "../../utils/api"
 import CardServ from "../../components/CardServs"
-import { Link } from "react-router-dom"
+
 
 
 function ListaServ(){
@@ -13,7 +13,7 @@ function ListaServ(){
     const [techDigitada, setTechDigitada] = useState<string>("");
     // variável de skill que foi digitada
     
-    // const [listaServicosFiltrados, setListaServicosFiltrados] = useState<any[]>([]);
+    const [listaServicosFiltrados, setListaServicosFiltrados] = useState<any[]>([]);
     // variável de lista de serviços que foram filtrados por skill
     
     useEffect(() =>{
@@ -23,7 +23,7 @@ function ListaServ(){
 
     function listarServicos(){
         api.get("servicos").then((response:any) => {
-            // console.log(response.data)
+            console.log(response.data)
             setServicos(response.data)
         }).catch(error => console.log("Erro ao obter os dados de serviço.", error));
     }
@@ -37,7 +37,7 @@ function ListaServ(){
             alert("Nenhum serviço com essa skill.")
         } else {
             // console.log(servicosFiltrados)
-            setServicos(servicosFiltrados)
+            setListaServicosFiltrados(servicosFiltrados)
             // define os serviços com os que foram filtrados
             // ANTES (NÃO FUNCIONAVA MAIS): setListaServicosFiltrados(servicosFiltrados)
         }
@@ -45,7 +45,7 @@ function ListaServ(){
 
     function retornoServicosGeral(event: any){
         if(event.target.value === ""){
-            listarServicos()
+            setListaServicosFiltrados(servicos)
         }
         setTechDigitada(event.target.value)
         // é o alvo da função
