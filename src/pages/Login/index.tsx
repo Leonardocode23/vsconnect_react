@@ -5,6 +5,8 @@ import { useState } from "react";
 
 import api from "../../utils/api";
 
+import secureLocalStorage from "react-secure-storage";
+
 
 
 function Login() {
@@ -22,6 +24,8 @@ function Login() {
 
         api.post("login", usuario).then((response) =>{
             console.log(response)
+
+            secureLocalStorage.setItem("user", response.data)
         })
         
     }
