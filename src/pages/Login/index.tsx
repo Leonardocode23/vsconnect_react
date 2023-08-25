@@ -7,9 +7,13 @@ import api from "../../utils/api";
 
 import secureLocalStorage from "react-secure-storage";
 
+import { useNavigate } from "react-router-dom";
+
 
 
 function Login() {
+
+    const navigate = useNavigate()
 
     const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")
@@ -26,6 +30,9 @@ function Login() {
             console.log(response)
 
             secureLocalStorage.setItem("user", response.data)
+
+            navigate("/perfil/" + response.data.user.id)
+            
         })
         
     }
